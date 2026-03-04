@@ -3,55 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Đổi Link Shopee 25%</title>
-<style>
-body{
-font-family:sans-serif;
-text-align:center;
-padding:30px;
-background:#f5f5f5
-}
-.box{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1)
-}
-input{
-width:90%;
-padding:12px;
-font-size:16px;
-margin-top:10px
-}
-button{
-margin-top:15px;
-padding:12px 30px;
-background:#ee4d2d;
-color:white;
-border:none;
-border-radius:5px;
-font-size:16px
-}
-</style>
 </head>
-<body>
 
-<div class="box">
-<h2>ĐỔI LINK SHOPEE ÁP MÃ 25%</h2>
+<body style="font-family:sans-serif;text-align:center;padding:40px;background:#f5f5f5;">
 
-<input type="text" id="link" placeholder="Dán link Shopee vào đây">
+<h2>Tool Đổi Link Shopee 25%</h2>
 
-<br>
-<button onclick="convert()">CHUYỂN ĐỔI NGAY</button>
-</div>
+<input type="text" id="link" placeholder="Dán link Shopee vào đây" style="width:80%;padding:10px;">
+<br><br>
+
+<button onclick="convert()" style="padding:10px 20px;">Đổi Link</button>
+
+<p id="result" style="margin-top:20px;color:red;"></p>
 
 <script>
-function convert(){
-var url=document.getElementById("link").value;
-if(url==""){
-alert("Vui lòng dán link!");
-return;
+function convert() {
+var link = document.getElementById("link").value;
+if(link === "") {
+document.getElementById("result").innerHTML = "Vui lòng nhập link";
+} else {
+document.getElementById("result").innerHTML = link;
 }
-window.location.href=url;
 }
 </script>
 
