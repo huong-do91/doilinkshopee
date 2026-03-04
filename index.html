@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Nhận mã giảm giá 25%</title>
-  <meta http-equiv="refresh" content="0; url=https://s.shopee.vn/4LEMjN8ZUq">
+<meta charset="UTF-8">
+<title>Đổi Link Shopee 25%</title>
+<style>
+body{
+font-family:sans-serif;
+text-align:center;
+padding:30px;
+background:#f5f5f5
+}
+.box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1)
+}
+input{
+width:90%;
+padding:12px;
+font-size:16px;
+margin-top:10px
+}
+button{
+margin-top:15px;
+padding:12px 30px;
+background:#ee4d2d;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px
+}
+</style>
 </head>
 <body>
-  <h2>Đang chuyển đến trang nhận mã 25%...</h2>
+
+<div class="box">
+<h2>ĐỔI LINK SHOPEE ÁP MÃ 25%</h2>
+
+<input type="text" id="link" placeholder="Dán link Shopee vào đây">
+
+<br>
+<button onclick="convert()">CHUYỂN ĐỔI NGAY</button>
+</div>
+
+<script>
+function convert(){
+var url=document.getElementById("link").value;
+if(url==""){
+alert("Vui lòng dán link!");
+return;
+}
+window.location.href=url;
+}
+</script>
+
 </body>
 </html>
